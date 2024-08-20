@@ -1,0 +1,15 @@
+/Users/zane/Desktop/Mastermind/bin/Debug/net8.0/Mastermind
+/Users/zane/Desktop/Mastermind/bin/Debug/net8.0/Mastermind.deps.json
+/Users/zane/Desktop/Mastermind/bin/Debug/net8.0/Mastermind.runtimeconfig.json
+/Users/zane/Desktop/Mastermind/bin/Debug/net8.0/Mastermind.dll
+/Users/zane/Desktop/Mastermind/bin/Debug/net8.0/Mastermind.pdb
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.AssemblyInfoInputs.cache
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.AssemblyInfo.cs
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.csproj.CoreCompileInputs.cache
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.sourcelink.json
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.dll
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/refint/Mastermind.dll
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.pdb
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/Mastermind.genruntimeconfig.cache
+/Users/zane/Desktop/Mastermind/obj/Debug/net8.0/ref/Mastermind.dll
