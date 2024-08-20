@@ -5,8 +5,31 @@ Console.WriteLine("Welcome to Mastermind!\n");
 
 printInstructions();
 
+bool startGame = false;
+
+while (!startGame) {
+    string startInput = Console.ReadLine()!;
+    if (startInput.Equals("help")) {
+        printInstructions();
+    } else if (startInput == "exit") {
+        break;
+    } else {
+        startGame = true;
+    }
+}
+
+while (startGame) {
+    Game game = new Game();
+    startGame = false;
+}
+
+Console.WriteLine("Thanks for playing Mastermind. Goodbye!");
+
+
+
+
 static void printInstructions() {
-    Console.WriteLine("I will think of a 4 digit secret code. Your job is to guess the secret code.");
+    Console.WriteLine("\nI will think of a 4 digit secret code. Your job is to guess the secret code.");
     Console.WriteLine("You will have 10 tries to guess the code.");
     Console.WriteLine("After each guess, I will print out a '+' for each digit in the correct place,");
     Console.WriteLine("then a '-' for every other digit in the puzzle but not in the correct place,");
