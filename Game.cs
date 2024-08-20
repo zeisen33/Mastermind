@@ -24,23 +24,25 @@ class Game {
             codeStr += digit;
         }
 
-        string guess;
+        int guess;
 
         while (gameState.Equals("playing")) {
             if (guessesRemaining > 0) {
                 Console.Write($"\nYou have {guessesRemaining} guesses remaining. Please enter your 4 digit guess: ");
 
                 try {
-                    guess = Console.ReadLine()!;
+                    guess = Convert.ToInt16(Console.ReadLine());
                     if (guess.Equals("exit")) {
                         return;
                     } else if (guess.Equals("help")) {
                         printInstructions();
                         continue;
+                    } else {
+                        string res = compareGuessToCode(guess, codeStr);
                     }
-                    string res = compareGuessToCode(guess);
-                } catch (Exception) {
-                    Console.WriteLine("Please make sure to enter only four digits 1-6.\n");
+                } catch (Exception e) {
+                    Console.WriteLine("\nPlease make sure to enter only four digits 1-6.\n");
+                    Console.WriteLine(e.ToString());
                 }
 
             } else {
@@ -50,8 +52,69 @@ class Game {
         }
     }
 
-    public string compareGuessToCode(string guess) {
-        return $"Guess was ${guess}";
+    public string compareGuessToCode(int guess, string codeStr) {
+        Console.WriteLine(guess);
+        // Console.WriteLine("Comparing");
+        int countPlus = 0, countMinus = 0;
+
+        // Create dictionary of each digitInCode -> Positions where digit appears in code
+        Dictionary<int, List<int>> codeDict = new Dictionary<int, List<int>>();
+        for (int i = 0; i < 4; i++) {
+            if (!codeDict.ContainsKey(code[i])) {
+                codeDict.Add(code[i], new List<int>());
+            }
+            List<int> idcs = codeDict[code[i]];
+            idcs.Add(i);
+            codeDict[code[i]] = idcs;
+        } 
+
+        foreach(int key in codeDict.Keys) {
+            string keyPositions = "";
+            List<int> positions = codeDict[key];
+            foreach (int idx in positions) {
+                keyPositions += idx + " ";
+            }
+            Console.WriteLine($"{key} -> {keyPositions}");
+        }
+
+        // Loop over each digit guessed
+        for (int g = 3; g >= 0 ; g--) {
+            int guessedDigit = (int) (guess / (Math.Pow(10, g))) % 10;
+            Console.WriteLine($"Digit Guessed: {guessedDigit}");
+            if (codeDict.ContainsKey(guessedDigit)) {
+                List<int> positions = codeDict[guessedDigit];
+                if (positions.Contains(g)) {
+                    countPlus++;
+                    positions.Remove(g);
+                    codeDict[guessedDigit] = positions;
+                }
+            }
+        }
+
+        foreach(int key in codeDict.Keys) {
+            string keyPositions = "";
+            List<int> positions = codeDict[key];
+            foreach (int idx in positions) {
+                keyPositions += idx + " ";
+            }
+            Console.WriteLine($"{key} -> {keyPositions}");
+        }
+
+        
+        for (int k = 3; k >= 0; k--) {
+            int guessedDigit = (int) (guess / (Math.Pow(10, k))) % 10;
+            if (codeDict.ContainsKey(guessedDigit)) {
+                List<int> positions = codeDict[guessedDigit];
+                countMinus++;
+                if (positions.Count > 0)
+                positions.RemoveAt(0);
+                codeDict[guessedDigit] = positions;
+            }
+        }
+       
+        string res = $"Pluses: {countPlus}, Minuses: {countMinus}";
+        Console.WriteLine(res);
+        return res;
     }
 
 
@@ -78,5 +141,4 @@ class Game {
         Console.WriteLine("Enter 'help' at any time to see these instructions, or 'exit' to quit the game.");
         Console.WriteLine("Press any other key to get started!");
     }
-
 }
