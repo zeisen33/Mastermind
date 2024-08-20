@@ -32,9 +32,15 @@ class Game {
 
                 try {
                     guess = Console.ReadLine()!;
+                    if (guess.Equals("exit")) {
+                        return;
+                    } else if (guess.Equals("help")) {
+                        printInstructions();
+                        continue;
+                    }
                     string res = compareGuessToCode(guess);
                 } catch (Exception) {
-
+                    Console.WriteLine("Please make sure to enter only four digits 1-6.\n");
                 }
 
             } else {
@@ -45,7 +51,7 @@ class Game {
     }
 
     public string compareGuessToCode(string guess) {
-        return "";
+        return $"Guess was ${guess}";
     }
 
 
@@ -59,4 +65,18 @@ class Game {
             Console.Write($"{code[i]} ");
         }
     }
+    public static void printInstructions() {
+        Console.WriteLine("\nI will think of a secret code. Your job is to guess the secret code.");
+        Console.WriteLine("My code will be four digits 1 through 6. You will have 10 tries to guess the code.");
+        Console.WriteLine("After each guess, I will print out a '+' for each digit in the correct place,");
+        Console.WriteLine("then a '-' for every other digit in the puzzle but not in the correct place,");
+        Console.WriteLine("and nothing for digits not in the puzzle.");
+        Console.WriteLine("For example, if the code is '1234' and the guess is '4233',");
+        Console.WriteLine("I'd print out '+ + -'.");
+        Console.WriteLine("When guessing, make sure to type four digits 1-6, then hit Enter.\n");
+
+        Console.WriteLine("Enter 'help' at any time to see these instructions, or 'exit' to quit the game.");
+        Console.WriteLine("Press any other key to get started!");
+    }
+
 }
