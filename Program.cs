@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("===============================================================================");
+Console.WriteLine("================================================================================");
 Console.WriteLine("Welcome to Mastermind!\n");
 
 printInstructions();
@@ -29,8 +29,8 @@ Console.WriteLine("Thanks for playing Mastermind. Goodbye!");
 
 
 static void printInstructions() {
-    Console.WriteLine("\nI will think of a 4 digit secret code. Your job is to guess the secret code.");
-    Console.WriteLine("You will have 10 tries to guess the code.");
+    Console.WriteLine("\nI will think of a secret code. Your job is to guess the secret code.");
+    Console.WriteLine("My code will be 4 digits 1 through 6. You will have 10 tries to guess the code.");
     Console.WriteLine("After each guess, I will print out a '+' for each digit in the correct place,");
     Console.WriteLine("then a '-' for every other digit in the puzzle but not in the correct place,");
     Console.WriteLine("and nothing for digits not in the puzzle.");
