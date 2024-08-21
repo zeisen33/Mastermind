@@ -88,7 +88,7 @@ public class Game {
             }
         }
 
-        // Loop over guessed digits checking for -, remove from positions list
+        // Loop over guessed digits. If +, continue. Else, check for -, and remove from positions list
         for (int k = 0; k < CODE_LENGTH; k++) {
             char guessedDigit = guess[k];
             if (guessedDigit == codeStr[k]) {
