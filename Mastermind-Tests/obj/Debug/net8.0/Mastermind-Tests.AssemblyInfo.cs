@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mastermind-Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc851e3ffe95002c21deba2110b382ecfa3ec909")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74488d4f4296a98e7a200369dd0bdb7adba5675a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mastermind-Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mastermind-Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
