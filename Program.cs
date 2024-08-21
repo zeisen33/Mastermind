@@ -1,16 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
 Console.WriteLine("================================================================================");
 Console.WriteLine("Welcome to Mastermind!\n");
 
-Game.printInstructions();
+Game.PrintInstructions();
 
 bool startGame = false;
 
 while (!startGame) {
     string startInput = Console.ReadLine()!;
     if (startInput.Equals("help")) {
-        Game.printInstructions();
+        Game.PrintInstructions();
     } else if (startInput == "exit") {
         break;
     } else {
@@ -21,6 +22,22 @@ while (!startGame) {
 while (startGame) {
     Game game = new Game();
     startGame = false;
+    
+    while (true) {
+        Console.WriteLine("\nWould you like to play again? [y/n]");
+        string playAgain = Console.ReadLine()!;
+
+        if (playAgain.Equals("y")) {
+            startGame = true;
+            break;
+        } else if (playAgain.Equals("n") || playAgain.Equals("exit")) {
+            break;
+        } else if (playAgain.Equals("help")) {
+            Game.PrintInstructions();
+        } else {
+            Console.WriteLine("Please enter 'y' or 'n':");
+        }
+    }
 }
 
 Console.WriteLine("\nThanks for playing Mastermind. Goodbye!");
