@@ -1,6 +1,6 @@
 # Mastermind
 
-Welcome to Mastermind! This is a simple C# console app by Zane Eisen.
+Welcome to Mastermind! This is a simple C# console app by Zane Eisen, based on the famous board game of the same name.
 Make sure you have dotnet installed (https://dotnet.microsoft.com/en-us/download). If you run into problems, you might need to install the latest version.
 
 The src folder holds my source code for the Mastermind game.
