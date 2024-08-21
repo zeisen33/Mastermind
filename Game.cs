@@ -131,6 +131,6 @@ public class Game {
         Console.WriteLine("When guessing, make sure to type four digits 1-6, then hit Enter.\n");
 
         Console.WriteLine("Enter 'help' at any time to see these instructions, or 'exit' to quit the game.");
-        Console.WriteLine("Press any other key to get started!");
+        Console.WriteLine("Press any other key then hit Enter to get started!");
     }
 }
