@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mastermind")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+432ecde3af06cef20225b706a5c9349131312f32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a13674ae55465827fd455e12bcba2b5e9a562fa3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mastermind")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mastermind")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

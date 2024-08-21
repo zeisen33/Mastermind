@@ -113,6 +113,27 @@ public class Game {
             countMinus--;
         }
         return res;
+
+        // NOTE: I've been working with C# for only a day.
+        // For the CompareGuessToCode function, I wanted to write unit tests,
+        // but was unable to quickly setup a testing framework.
+        // Here are the tests I ran through printing the output of this function:
+
+        // Console.WriteLine(Game.CompareGuessToCode("1234", "1234")); -> "+ + + + "
+        // Console.WriteLine(Game.CompareGuessToCode("5555", "5555")); -> "+ + + + "
+        // Console.WriteLine(Game.CompareGuessToCode("7123", "5555")); -> Exception
+        // Console.WriteLine(Game.CompareGuessToCode("0123", "5555")); -> Exception
+        // Console.WriteLine(Game.CompareGuessToCode("f", "5555")); -> Exception
+        // Console.WriteLine(Game.CompareGuessToCode("", "5555")); -> Exception
+        // Console.WriteLine(Game.CompareGuessToCode("55555555", "5555")); -> Exception
+        // Console.WriteLine(Game.CompareGuessToCode("1234", "5555")); -> ""
+        // Console.WriteLine(Game.CompareGuessToCode("5123", "5555")); -> "+ "
+        // Console.WriteLine(Game.CompareGuessToCode("5123", "1555")); -> "- - "
+        // Console.WriteLine(Game.CompareGuessToCode("1145", "1555")); -> "+ + "
+        // Console.WriteLine(Game.CompareGuessToCode("6543", "3656")); -> "- - - "
+        // Console.WriteLine(Game.CompareGuessToCode("1123", "1423")); -> "+ + + "
+        // Console.WriteLine(Game.CompareGuessToCode("1423", "1123")); -> "+ + + "
+        // Console.WriteLine(Game.CompareGuessToCode("1223", "1123")); -> "+ + + "
     }
 
 

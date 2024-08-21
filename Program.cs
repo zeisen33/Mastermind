@@ -38,8 +38,3 @@ while (startGame) {
 }
 
 Console.WriteLine("\nThanks for playing Mastermind. Goodbye!");
-
-
-
-
-
